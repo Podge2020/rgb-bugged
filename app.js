@@ -66,6 +66,7 @@ function setupSquares(){
 				changeColors(clickedColor);
 				h1.style.background = clickedColor;
 				if(resetPressed){
+					//Bug 3 you cannot += a number, can only be done to variable (unsure how to correct yet)
 					score+=5; 
 					resetPressed = false;
 				}
