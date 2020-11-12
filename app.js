@@ -58,7 +58,8 @@ function setupSquares(){
 			//grab color of clicked square
 			var clickedColor = this.style.background;
 			//compare color to pickedColor
-			if(clickedColor = pickedColor){ 
+			//BUG1 originally showed = assignment not strict equality check resulting in first choice being shown as correct every time
+			if(clickedColor === pickedColor){ 
 				updateColorName();
 				messageDisplay.textContent = "Correct!";
 				resetButton.textContent = "Play Again?"
